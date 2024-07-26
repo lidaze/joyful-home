@@ -2,6 +2,9 @@ import type { data } from "@/consts/personal-info";
 
 import clsx from "clsx";
 import Link from "next/link";
+import Image from "next/image";
+import Tag from "./tag";
+import { Link as LinkIcon } from "lucide-react";
 
 interface ProjectItemProps {
   className?: string;
@@ -12,30 +15,49 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
   return (
     <div
       className={clsx(
-        "flex flex-col gap-y-2",
-        "prose border rounded-xl p-4",
+        "flex flex-col gap-y-4 relative overflow-hidden group",
+        "border rounded-xl p-6",
         "transition hover:shadow-md",
         className
       )}
     >
-      <h3>{project.title}</h3>
-      <p>{project.description}</p>
-      <iframe className="w-full h-32pointer-events-none border" src={project.link} />
-      <Link target="_blank" href={project.link}>
-        {project.link.substring(0, 30)}...
+      <Link
+        href={project.link}
+        target="__blank"
+        className="-m-6 mb-0 aspect-w-16 aspect-h-9 overflow-hidden border-b"
+      >
+        <Image
+          className="transition scale-110 group-hover:scale-125"
+          fill
+          objectFit="cover"
+          src={project.image}
+          alt={project.imageAlt}
+        />
       </Link>
-      <div>
-        {project.types.map((type, i) => (
-          <span key={i}>{type}</span>
-        ))}
-      </div>
+      <h2 className="text-xl">{project.title}</h2>
+      <p className="opacity-75">{project.description}</p>
       <div>
         {project.category.map((item, i) => (
-          <span key={i}>{item}</span>
+          <Tag variant="outline" key={i}>
+            {item}
+          </Tag>
+        ))}
+      </div>
+      <div className="flex gap-x-2">
+        {project.types.map((type, i) => (
+          <Tag className="rounded-md" key={i}>
+            {type}
+          </Tag>
         ))}
       </div>
       <div>
-        Started at: <b>{project.startDate.toDateString()}</b>
+        <Link
+          href={project.link}
+          target="__blank"
+          className="inline-flex items-center gap-x-2 border px-2 py-0.5 rounded-md"
+        >
+          <LinkIcon className="size-4" /> View the Project
+        </Link>
       </div>
     </div>
   );

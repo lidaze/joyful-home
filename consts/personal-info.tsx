@@ -2,6 +2,9 @@
  *
  */
 
+import XiaohongshuImage from "@/public/projects/01-xiaohongshu-extension.png";
+import MustDoImage from "@/public/projects/02-mustdo.top.png";
+
 export const data = {
   personal: {
     name: "Joyful Lee",
@@ -19,6 +22,8 @@ export const data = {
       types: ["Website", "iOS App"],
       category: ["Tools"],
       startDate: new Date("2024-06"),
+      image: MustDoImage,
+      imageAlt: "mustdo.top",
     },
     {
       title: "小红书Chrome插件",
@@ -27,6 +32,8 @@ export const data = {
       types: ["Chrome Extension"],
       category: ["Tools"],
       startDate: new Date("2024-06"),
+      image: XiaohongshuImage,
+      imageAlt: "小红书 Chrome 插件",
     },
   ],
 } as const;
