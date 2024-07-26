@@ -8,10 +8,18 @@ import MustDoImage from "@/public/projects/02-mustdo.top.png";
 export const data = {
   personal: {
     name: "Joyful Lee",
-    description: "Hi, I'm a Joyful and am a developer, I love buiding things... ",
+    desc: [
+      "I am front-end developer, currently learning to do full-stack development and trying to become an Indie Hacker 👨‍💻",
+      "I love snowboarding 🏂, surfing 🏄🏻, surfskating 🛹, riding motorcycles 🏍, lifting 🏋🏻, and so much more, super into sports",
+      "Also love reading 📚, history, novels, self-growth, and other genres",
+      "Welecome to contact me in many ways ~",
+    ],
     links: {
-      github: "https://github.com/lidaze",
+      email: "lidaze1020@gmail.com",
       twitter: "https://x.com/joyful_ze",
+      github: "https://github.com/lidaze",
+      xiaohongshu1: "https://www.xiaohongshu.com/user/profile/5515620aa46e96326581f0e6",
+      xiaohongshu2: "https://www.xiaohongshu.com/user/profile/614f43620000000002018078",
     },
   },
   projects: [
