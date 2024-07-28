@@ -1,5 +1,8 @@
 {
-  "HomePage": {
-    "title": "你好啊"
+  "PersonalInfo": {
+    "hello": "你好！我是"
+  },
+  "Project": {
+    "view-btn": "查看"
   }
 }

@@ -78,14 +78,7 @@ const config = {
       },
     },
   },
-  corePlugins: {
-    aspectRatio: false,
-  },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
-  ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;

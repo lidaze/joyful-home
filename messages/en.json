@@ -1,5 +1,8 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "PersonalInfo": {
+    "hello": "Hey! I'm"
+  },
+  "Project": {
+    "view-btn": "View"
   }
 }

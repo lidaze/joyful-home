@@ -1,4 +1,4 @@
-import type { data } from "@/consts/personal-info";
+import type { Project } from "@/consts/personal-info-data";
 
 import clsx from "clsx";
 import Link from "next/link";
@@ -6,13 +6,16 @@ import Image from "next/image";
 import { Link as LinkIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import { useTranslations } from "next-intl";
 
 interface ProjectItemProps {
   className?: string;
-  project: (typeof data.projects)[number];
+  project: Project;
 }
 
 export default function ProjectItem({ className, project }: ProjectItemProps) {
+  const t = useTranslations("Project");
+
   return (
     <div
       className={clsx(
@@ -25,7 +28,7 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
       <Link
         href={project.link}
         target="__blank"
-        className="-m-6 mb-0 aspect-w-16 aspect-h-9 overflow-hidden border-b"
+        className="-m-6 mb-0 aspect-[2.35/1] overflow-hidden border-b"
       >
         <Image
           className="transition scale-110 group-hover:scale-125"
@@ -36,7 +39,7 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
         />
       </Link>
       <h2 className="text-xl">{project.title}</h2>
-      <p className="opacity-80">{project.description}</p>
+      <p className="text-sm text-muted-foreground">{project.description}</p>
       <div>
         {project.category.map((item, i) => (
           <Badge variant="secondary" className="rounded-full" key={i}>
@@ -55,7 +58,7 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
         <Link href={project.link} target="__blank">
           <Button size="sm">
             <LinkIcon className="size-4 mr-2" />
-            View the Project
+            {t("view-btn")}
           </Button>
         </Link>
       </div>
