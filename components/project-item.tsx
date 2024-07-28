@@ -29,15 +29,14 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
       >
         <Image
           className="transition scale-110 group-hover:scale-125"
-          fill
-          // objectFit="cover"
+          priority
           src={project.image}
           alt={project.imageAlt}
           style={{ objectFit: "cover" }}
         />
       </Link>
       <h2 className="text-xl">{project.title}</h2>
-      <p className="opacity-75">{project.description}</p>
+      <p className="opacity-80">{project.description}</p>
       <div>
         {project.category.map((item, i) => (
           <Badge variant="secondary" className="rounded-full" key={i}>

@@ -1,12 +1,16 @@
 import clsx from "clsx";
 import PersonalInfo from "@/components/personal-info";
 import Projects from "@/components/projects";
+import MainFooter from "@/components/main-footer";
 
 export default function Home() {
   return (
-    <main className={clsx("min-h-screen max-w-screen-lg mx-auto", "flex flex-col gap-4 items-center sm:flex-row sm:items-start")}>
-      <PersonalInfo className="w-full sm:w-[360px] p-10" />
-      <Projects className="flex-1 p-10" />
+    <main className="min-h-screen max-w-screen-lg mx-auto pt-8 px-8">
+      <div className={clsx("flex flex-col gap-4 items-center sm:flex-row sm:items-start")}>
+        <PersonalInfo className="w-full sm:w-[360px]" />
+        <Projects className="flex-1 mt-10 sm:mt-0" />
+      </div>
+      <MainFooter />
     </main>
   );
 }

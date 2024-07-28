@@ -16,13 +16,13 @@ export default function PersonalInfo({ className }: PersonalInfoProps) {
   return (
     <div className={clsx("flex flex-col gap-y-4", className)}>
       <Image className="rounded-full size-20" src={avatar} alt="avatar" />
-      <article className="prose">
-        <h2 className="mb-5">
+      <article className="">
+        <h2 className="mb-6 text-3xl font-semibold">
           Hey! I&apos;m <b>{personal.name}</b>
         </h2>
-        <div className="">
+        <div className="space-y-4">
           {personal.desc.map((item, i) => (
-            <p className="" key={i}>
+            <p className="leading-relaxed" key={i}>
               {item}
             </p>
           ))}
@@ -42,10 +42,10 @@ export default function PersonalInfo({ className }: PersonalInfoProps) {
           </div>
           <div className="flex gap-x-4 mt-2">
             <Link href={personal.links.xiaohongshu1} target="__blank">
-              <Icons.xiaohongshu className="not-prose" /> Joyful
+              <Icons.xiaohongshu className="grayscale" /> Joyful
             </Link>
             <Link href={personal.links.xiaohongshu2} target="__blank">
-              <Icons.xiaohongshu className="not-prose" /> 从小就爱玩
+              <Icons.xiaohongshu className="grayscale" /> 从小就爱玩
             </Link>
           </div>
         </div>
