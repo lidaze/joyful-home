@@ -3,8 +3,9 @@ import type { data } from "@/consts/personal-info";
 import clsx from "clsx";
 import Link from "next/link";
 import Image from "next/image";
-import Tag from "./tag";
 import { Link as LinkIcon } from "lucide-react";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 interface ProjectItemProps {
   className?: string;
@@ -29,34 +30,34 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
         <Image
           className="transition scale-110 group-hover:scale-125"
           fill
-          objectFit="cover"
+          // objectFit="cover"
           src={project.image}
           alt={project.imageAlt}
+          style={{ objectFit: "cover" }}
         />
       </Link>
       <h2 className="text-xl">{project.title}</h2>
       <p className="opacity-75">{project.description}</p>
       <div>
         {project.category.map((item, i) => (
-          <Tag variant="outline" key={i}>
+          <Badge variant="secondary" className="rounded-full" key={i}>
             {item}
-          </Tag>
+          </Badge>
         ))}
       </div>
       <div className="flex gap-x-2">
         {project.types.map((type, i) => (
-          <Tag className="rounded-md" key={i}>
+          <Badge variant="outline" key={i}>
             {type}
-          </Tag>
+          </Badge>
         ))}
       </div>
       <div>
-        <Link
-          href={project.link}
-          target="__blank"
-          className="inline-flex items-center gap-x-2 border px-2 py-0.5 rounded-md"
-        >
-          <LinkIcon className="size-4" /> View the Project
+        <Link href={project.link} target="__blank">
+          <Button size="sm">
+            <LinkIcon className="size-4 mr-2" />
+            View the Project
+          </Button>
         </Link>
       </div>
     </div>
