@@ -31,7 +31,12 @@ export default function ThemeToggle({ className }: ThemeToggleProps) {
         value={theme}
       >
         {themeOptions.map((item) => (
-          <ToggleGroupItem key={item.value} className="rounded-full" size="sm" value={item.value}>
+          <ToggleGroupItem
+            key={item.value}
+            className="rounded-full size-7 px-1"
+            size="sm"
+            value={item.value}
+          >
             {item.icon}
           </ToggleGroupItem>
         ))}

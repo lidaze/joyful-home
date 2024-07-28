@@ -5,6 +5,7 @@ import Image from "next/image";
 import avatar from "@/public/avatar.jpg";
 import { Icons } from "./icons";
 import { Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const { personal } = data;
 
@@ -13,10 +14,12 @@ interface PersonalInfoProps {
 }
 
 export default function PersonalInfo({ className }: PersonalInfoProps) {
+  const t = useTranslations("HomePage");
   return (
     <div className={clsx("flex flex-col gap-y-4", className)}>
       <Image className="rounded-full size-20" src={avatar} alt="avatar" />
       <article className="">
+        <h1>{t("title")}</h1>
         <h2 className="mb-6 text-3xl font-semibold">
           Hey! I&apos;m <b>{personal.name}</b>
         </h2>
