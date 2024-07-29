@@ -7,6 +7,7 @@ import { Link as LinkIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { useTranslations } from "next-intl";
+import { Icons } from "./icons";
 
 interface ProjectItemProps {
   className?: string;
@@ -54,13 +55,21 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
           </Badge>
         ))}
       </div>
-      <div>
+      <div className="flex gap-x-2">
         <Link href={project.link} target="__blank">
           <Button size="sm">
             <LinkIcon className="size-4 mr-2" />
             {t("view-btn")}
           </Button>
         </Link>
+        {project.sourceCode && (
+          <Link href={project.sourceCode} target="__blank">
+            <Button size="sm">
+              <Icons.github className="size-4 mr-2" />
+              {t("code-btn")}
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );

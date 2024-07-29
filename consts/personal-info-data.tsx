@@ -5,11 +5,13 @@
 import type { StaticImageData } from "next/image";
 import XiaohongshuImage from "@/public/projects/01-xiaohongshu-extension.png";
 import MustDoImage from "@/public/projects/02-mustdo.top.png";
+import LidazeComImage from "@/public/projects/03-lidaze.com.png";
 
 export type Project = {
   title: string;
   description: string;
   link: string;
+  sourceCode?: string; // 源码
   types: string[];
   category: string[];
   startDate: Date;
@@ -22,7 +24,7 @@ export type Project = {
  */
 export const enData = {
   personal: {
-    name: "Joyful Lee (大泽)",
+    name: "Joyful Lee",
     desc: [
       "I am front-end developer, currently learning to do full-stack development and trying to become an Indie Hacker 👨‍💻",
       "I love snowboarding 🏂, surfing 🏄🏻, surfskating 🛹, riding motorcycles 🏍, lifting 🏋🏻, and so much more, super into sports",
@@ -31,6 +33,17 @@ export const enData = {
     ],
   },
   projects: [
+    {
+      title: "Home",
+      description: "Home Page, showing my info and projects",
+      link: "https://lidaze.com/",
+      sourceCode: "https://github.com/lidaze/joyful-home",
+      types: ["website"],
+      category: ["home"],
+      startDate: new Date("2024-07"),
+      image: LidazeComImage,
+      imageAlt: "lidaze.com",
+    },
     {
       title: "MustDo",
       description: "manange and show your bucket list in a simple and direct way",
@@ -45,6 +58,7 @@ export const enData = {
       title: "小红书 Chrome Extension",
       description: "Synchronously open the blogger's homepage - 小红书",
       link: "https://chromewebstore.google.com/detail/%E5%90%8C%E6%AD%A5%E5%BC%80%E5%90%AF%E5%8D%9A%E4%B8%BB%E9%A6%96%E9%A1%B5-%E5%B0%8F%E7%BA%A2%E4%B9%A6/jajeijpokcdhaamakmfkoibkoaadnomj",
+      sourceCode: "https://github.com/lidaze/xhs-user-tab-extension",
       types: ["Chrome Extension"],
       category: ["Tools"],
       startDate: new Date("2024-06"),
@@ -59,7 +73,7 @@ export const enData = {
  */
 export const zhData = {
   personal: {
-    name: "大泽 (Joyful Lee)",
+    name: "大泽",
     desc: [
       "我是前端程序员，正在学习如何进行全栈开发，努力成为一名Indie Hacker 👨‍💻",
       "我喜欢单板滑雪 🏂，冲浪 🏄🏻， 路冲 🛹， 骑摩托车 🏍， 健身 🏋🏻 等等，超级喜欢运动",
@@ -68,6 +82,17 @@ export const zhData = {
     ],
   },
   projects: [
+    {
+      title: "个人主页",
+      description: "个人主页，展示个人信息及个人项目",
+      link: "https://lidaze.com/",
+      sourceCode: "https://github.com/lidaze/joyful-home",
+      types: ["网站"],
+      category: ["home"],
+      startDate: new Date("2024-07"),
+      image: LidazeComImage,
+      imageAlt: "lidaze.com",
+    },
     {
       title: "MustDo",
       description: "以一种简单和直接的方式，管理和展示您的人生清单 🪣",
@@ -82,6 +107,7 @@ export const zhData = {
       title: "小红书Chrome插件",
       description: "同步开启博主首页 - 小红书",
       link: "https://chromewebstore.google.com/detail/%E5%90%8C%E6%AD%A5%E5%BC%80%E5%90%AF%E5%8D%9A%E4%B8%BB%E9%A6%96%E9%A1%B5-%E5%B0%8F%E7%BA%A2%E4%B9%A6/jajeijpokcdhaamakmfkoibkoaadnomj",
+      sourceCode: "https://github.com/lidaze/xhs-user-tab-extension",
       types: ["Chrome 插件"],
       category: ["工具"],
       startDate: new Date("2024-06"),

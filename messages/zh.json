@@ -3,6 +3,7 @@
     "hello": "你好！我是"
   },
   "Project": {
-    "view-btn": "查看"
+    "view-btn": "查看",
+    "code-btn": "源码"
   }
 }
