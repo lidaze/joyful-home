@@ -17,6 +17,7 @@ export type Project = {
   startDate: Date;
   image: StaticImageData;
   imageAlt: string;
+  skills: string[];
 };
 
 /**
@@ -43,6 +44,7 @@ export const enData = {
       startDate: new Date("2024-07"),
       image: LidazeComImage,
       imageAlt: "lidaze.com",
+      skills: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "Lucide React", "next-intl"],
     },
     {
       title: "MustDo",
@@ -53,6 +55,18 @@ export const enData = {
       startDate: new Date("2024-06"),
       image: MustDoImage,
       imageAlt: "mustdo.top",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+        "Lucide React",
+        "next-intl",
+        "Supabase",
+        "Swift",
+        "Swift UI",
+      ],
     },
     {
       title: "小红书 Chrome Extension",
@@ -64,6 +78,7 @@ export const enData = {
       startDate: new Date("2024-06"),
       image: XiaohongshuImage,
       imageAlt: "小红书 Chrome Extension",
+      skills: ["Javascript"],
     },
   ],
 };
@@ -92,6 +107,7 @@ export const zhData = {
       startDate: new Date("2024-07"),
       image: LidazeComImage,
       imageAlt: "lidaze.com",
+      skills: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "Lucide React", "next-intl"],
     },
     {
       title: "MustDo",
@@ -102,6 +118,18 @@ export const zhData = {
       startDate: new Date("2024-06"),
       image: MustDoImage,
       imageAlt: "mustdo.top",
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Magic UI",
+        "Lucide React",
+        "next-intl",
+        "Supabase",
+        "Swift",
+        "Swift UI",
+      ],
     },
     {
       title: "小红书Chrome插件",
@@ -113,6 +141,7 @@ export const zhData = {
       startDate: new Date("2024-06"),
       image: XiaohongshuImage,
       imageAlt: "小红书 Chrome 插件",
+      skills: ["Javascript"],
     },
   ],
 };

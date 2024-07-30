@@ -41,6 +41,13 @@ export default function ProjectItem({ className, project }: ProjectItemProps) {
       </Link>
       <h2 className="text-xl">{project.title}</h2>
       <p className="text-sm text-muted-foreground">{project.description}</p>
+      <div className="flex flex-wrap gap-2">
+        {project.skills.map((skill, i) => (
+          <Badge variant="secondary" key={i}>
+            {skill}
+          </Badge>
+        ))}
+      </div>
       <div>
         {project.category.map((item, i) => (
           <Badge variant="secondary" className="rounded-full" key={i}>
