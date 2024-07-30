@@ -3,6 +3,12 @@
 import { useRef } from "react";
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 
+
+// fix the ts error
+type UseInViewOptions = Exclude<Parameters<typeof useInView>[1], undefined>;
+type MarginType = UseInViewOptions['margin'];
+
+
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
@@ -14,7 +20,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: string;
+  inViewMargin?: MarginType;
   blur?: string;
 }
 
