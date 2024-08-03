@@ -5,5 +5,10 @@
   "Project": {
     "view-btn": "View more",
     "code-btn": "Source code"
+  },
+  "Reading": {
+    "week-no": "This week is the <num>no</num> week of the year",
+    "no": "No.<num>no</num>",
+    "of-the-year": "of the year"
   }
 }

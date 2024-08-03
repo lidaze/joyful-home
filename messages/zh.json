@@ -5,5 +5,10 @@
   "Project": {
     "view-btn": "查看",
     "code-btn": "源码"
+  },
+  "Reading": {
+    "week-no": "本周是今年的第<num>no</num>周",
+    "no": "第<num>no</num>本",
+    "of-the-year": "今年读完的"
   }
 }
